@@ -96,7 +96,7 @@ fi
 if [ -z "$identifier_v6" ]; then
     echo "IPv6 addresses are not required."
 else
-    IP=$(curl -6 ip.sb)
+    IP=$(curl ipv6.ip.sb)
     regex='^([0-9a-fA-F]{0,4}:){1,7}[0-9a-fA-F]{0,4}$'
     matchIP=$(echo $IP | grep -E $regex)
     if [ -n "$matchIP" ]; then
